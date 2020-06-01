@@ -1,0 +1,6 @@
+framework module Pods_Moodiness {
+  umbrella header "Pods-Moodiness-umbrella.h"
+
+  export *
+  module * { export * }
+}
