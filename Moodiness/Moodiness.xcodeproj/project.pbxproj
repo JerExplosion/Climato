@@ -16,6 +16,7 @@
 		8F1574AC2484AB8000968526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1574AA2484AB8000968526 /* LaunchScreen.storyboard */; };
 		8F5E31DE2485655700BF6390 /* TenkiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DD2485655700BF6390 /* TenkiModel.swift */; };
 		8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DF2485687300BF6390 /* TenkiCeo.swift */; };
+		8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A4CD624874AA400116F47 /* NauticalData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8F1574AD2484AB8000968526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F5E31DD2485655700BF6390 /* TenkiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiModel.swift; sourceTree = "<group>"; };
 		8F5E31DF2485687300BF6390 /* TenkiCeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiCeo.swift; sourceTree = "<group>"; };
+		8F7A4CD624874AA400116F47 /* NauticalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticalData.swift; sourceTree = "<group>"; };
 		99040CCB9961E820B4542C75 /* Pods-Moodiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.debug.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +80,11 @@
 				8F15749F2484AB7B00968526 /* AppDelegate.swift */,
 				8F1574A12484AB7B00968526 /* SceneDelegate.swift */,
 				8F1574A32484AB7B00968526 /* TenkiViewController.swift */,
-				8F5E31DC2485652500BF6390 /* Model */,
 				8F5E31E12485693800BF6390 /* ChiefOps */,
+				8F5E31DC2485652500BF6390 /* Model */,
 				8F1574A52484AB7B00968526 /* Main.storyboard */,
 				8F1574A82484AB8000968526 /* Assets.xcassets */,
+				8F7A4CD524874A0700116F47 /* Climato Reverse-Engineer */,
 				8F1574AA2484AB8000968526 /* LaunchScreen.storyboard */,
 				8F1574AD2484AB8000968526 /* Info.plist */,
 			);
@@ -102,6 +105,14 @@
 				8F5E31DF2485687300BF6390 /* TenkiCeo.swift */,
 			);
 			path = ChiefOps;
+			sourceTree = "<group>";
+		};
+		8F7A4CD524874A0700116F47 /* Climato Reverse-Engineer */ = {
+			isa = PBXGroup;
+			children = (
+				8F7A4CD624874AA400116F47 /* NauticalData.swift */,
+			);
+			path = "Climato Reverse-Engineer";
 			sourceTree = "<group>";
 		};
 		F019BE1D8960B646F231B67D /* Pods */ = {
@@ -228,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */,
 				8F1574A42484AB7B00968526 /* TenkiViewController.swift in Sources */,
 				8F1574A02484AB7B00968526 /* AppDelegate.swift in Sources */,
 				8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */,
