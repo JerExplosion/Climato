@@ -10,13 +10,13 @@
         <!--View Controller-->
         <scene sceneID="JJW-Yw-S49">
             <objects>
-                <viewController id="LUA-Ss-5V5" sceneMemberID="viewController">
+                <viewController id="LUA-Ss-5V5" customClass="ACViewController" customModule="Moodiness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="moI-UX-BKM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nab-lW-MAK" userLabel="Container View">
-                                <rect key="frame" x="67" y="192.5" width="280" height="230"/>
+                                <rect key="frame" x="67" y="212" width="280" height="230"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-pW-auC">
                                         <rect key="frame" x="25" y="25" width="230" height="180"/>
@@ -141,7 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xZb-P2-ePf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="1Gs-f3-J1z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="1Gs-f3-J1z">
                             <connections>
                                 <action selector="additionTapped:" destination="BYZ-38-t0r" id="MkP-vK-CJu"/>
                             </connections>
@@ -156,7 +156,7 @@
                         <outlet property="ambienceImageView" destination="6Lh-n0-euB" id="hmm-ko-Dc8"/>
                         <outlet property="ambienceLabel" destination="x8L-cc-M0O" id="EYq-Yl-lLP"/>
                         <outlet property="temperamentLabel" destination="Jak-e7-UYT" id="NWF-QO-5gE"/>
-                        <segue destination="LUA-Ss-5V5" kind="presentation" identifier="showAC" id="935-TO-dce"/>
+                        <segue destination="LUA-Ss-5V5" kind="presentation" identifier="showAC" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="935-TO-dce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

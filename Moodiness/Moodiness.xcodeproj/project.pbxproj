@@ -17,7 +17,9 @@
 		8F5E31DE2485655700BF6390 /* TenkiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DD2485655700BF6390 /* TenkiModel.swift */; };
 		8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DF2485687300BF6390 /* TenkiCeo.swift */; };
 		8F6639A52488529E00162223 /* GloballyUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6639A42488529E00162223 /* GloballyUsed.swift */; };
-		8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A4CD624874AA400116F47 /* NauticalData.swift */; };
+		8F6639A724889E8E00162223 /* ACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6639A624889E8E00162223 /* ACViewController.swift */; };
+		8F6639AA2488A31500162223 /* NauticaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6639A92488A31500162223 /* NauticaModel.swift */; };
+		8F7A4CD724874AA400116F47 /* NauticaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A4CD624874AA400116F47 /* NauticaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +36,9 @@
 		8F5E31DD2485655700BF6390 /* TenkiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiModel.swift; sourceTree = "<group>"; };
 		8F5E31DF2485687300BF6390 /* TenkiCeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiCeo.swift; sourceTree = "<group>"; };
 		8F6639A42488529E00162223 /* GloballyUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyUsed.swift; sourceTree = "<group>"; };
-		8F7A4CD624874AA400116F47 /* NauticalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticalData.swift; sourceTree = "<group>"; };
+		8F6639A624889E8E00162223 /* ACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewController.swift; sourceTree = "<group>"; };
+		8F6639A92488A31500162223 /* NauticaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticaModel.swift; sourceTree = "<group>"; };
+		8F7A4CD624874AA400116F47 /* NauticaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticaData.swift; sourceTree = "<group>"; };
 		99040CCB9961E820B4542C75 /* Pods-Moodiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.debug.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 				8F15749F2484AB7B00968526 /* AppDelegate.swift */,
 				8F1574A12484AB7B00968526 /* SceneDelegate.swift */,
 				8F1574A32484AB7B00968526 /* TenkiViewController.swift */,
+				8F6639A824889ECD00162223 /* ViewControls */,
 				8F5E31E12485693800BF6390 /* ChiefOps */,
 				8F5E31DC2485652500BF6390 /* Model */,
 				8F1574A52484AB7B00968526 /* Main.storyboard */,
@@ -110,10 +115,19 @@
 			path = ChiefOps;
 			sourceTree = "<group>";
 		};
+		8F6639A824889ECD00162223 /* ViewControls */ = {
+			isa = PBXGroup;
+			children = (
+				8F6639A624889E8E00162223 /* ACViewController.swift */,
+			);
+			path = ViewControls;
+			sourceTree = "<group>";
+		};
 		8F7A4CD524874A0700116F47 /* Climato Reverse-Engineer */ = {
 			isa = PBXGroup;
 			children = (
-				8F7A4CD624874AA400116F47 /* NauticalData.swift */,
+				8F7A4CD624874AA400116F47 /* NauticaData.swift */,
+				8F6639A92488A31500162223 /* NauticaModel.swift */,
 			);
 			path = "Climato Reverse-Engineer";
 			sourceTree = "<group>";
@@ -242,10 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */,
+				8F7A4CD724874AA400116F47 /* NauticaData.swift in Sources */,
 				8F1574A42484AB7B00968526 /* TenkiViewController.swift in Sources */,
 				8F1574A02484AB7B00968526 /* AppDelegate.swift in Sources */,
 				8F6639A52488529E00162223 /* GloballyUsed.swift in Sources */,
+				8F6639AA2488A31500162223 /* NauticaModel.swift in Sources */,
+				8F6639A724889E8E00162223 /* ACViewController.swift in Sources */,
 				8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */,
 				8F1574A22484AB7B00968526 /* SceneDelegate.swift in Sources */,
 				8F5E31DE2485655700BF6390 /* TenkiModel.swift in Sources */,
