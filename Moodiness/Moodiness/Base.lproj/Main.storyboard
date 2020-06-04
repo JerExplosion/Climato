@@ -14,13 +14,75 @@
                     <view key="view" contentMode="scaleToFill" id="moI-UX-BKM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nab-lW-MAK" userLabel="Container View">
+                                <rect key="frame" x="67" y="192.5" width="280" height="230"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-pW-auC">
+                                        <rect key="frame" x="25" y="25" width="230" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5K-rM-TJC">
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3B-hA-dcN">
+                                                <rect key="frame" x="0.0" y="33.5" width="230" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="XuR-Me-w2q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK8-yb-Ka6">
+                                                <rect key="frame" x="0.0" y="81.5" width="230" height="35"/>
+                                                <color key="backgroundColor" red="0.79508519172668457" green="0.94716519117355347" blue="0.90393859148025513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="Xhm-KV-YlT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <state key="normal" title="Search "/>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ze1-y4-DV5">
+                                                <rect key="frame" x="0.0" y="126.5" width="230" height="20"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Indicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuH-1S-uBr">
+                                                <rect key="frame" x="0.0" y="156.5" width="230" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="oc0-pW-auC" firstAttribute="leading" secondItem="nab-lW-MAK" secondAttribute="leading" constant="25" id="7iI-zB-ACp"/>
+                                    <constraint firstAttribute="bottom" secondItem="oc0-pW-auC" secondAttribute="bottom" constant="25" id="BAg-1m-5TE"/>
+                                    <constraint firstAttribute="trailing" secondItem="oc0-pW-auC" secondAttribute="trailing" constant="25" id="C6U-a6-zxl"/>
+                                    <constraint firstItem="oc0-pW-auC" firstAttribute="top" secondItem="nab-lW-MAK" secondAttribute="top" constant="25" id="ayJ-rE-LWa"/>
+                                    <constraint firstAttribute="width" constant="280" id="n7j-dF-vGF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nab-lW-MAK" firstAttribute="centerY" secondItem="moI-UX-BKM" secondAttribute="centerY" multiplier="0.73" id="ZOZ-NJ-WG3"/>
+                            <constraint firstItem="nab-lW-MAK" firstAttribute="centerX" secondItem="moI-UX-BKM" secondAttribute="centerX" id="xVw-gm-3tJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8z6-4h-jza"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJg-HR-6mX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-554"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="-554.46428571428567"/>
         </scene>
         <!--Tenki View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -94,12 +156,12 @@
                         <outlet property="ambienceImageView" destination="6Lh-n0-euB" id="hmm-ko-Dc8"/>
                         <outlet property="ambienceLabel" destination="x8L-cc-M0O" id="EYq-Yl-lLP"/>
                         <outlet property="temperamentLabel" destination="Jak-e7-UYT" id="NWF-QO-5gE"/>
-                        <segue destination="LUA-Ss-5V5" kind="presentation" identifier="WarningSolved" id="935-TO-dce"/>
+                        <segue destination="LUA-Ss-5V5" kind="presentation" identifier="showAC" id="935-TO-dce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+            <point key="canvasLocation" x="978" y="229"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hux-vw-N0Y">

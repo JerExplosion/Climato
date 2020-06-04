@@ -74,7 +74,10 @@ class TenkiViewController: UIViewController {
     }
     
     @IBAction func additionTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: GloballyUsed.showACsegue, sender: nil )
     }
 
 }
+
+         
 

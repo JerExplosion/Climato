@@ -16,6 +16,7 @@
 		8F1574AC2484AB8000968526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1574AA2484AB8000968526 /* LaunchScreen.storyboard */; };
 		8F5E31DE2485655700BF6390 /* TenkiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DD2485655700BF6390 /* TenkiModel.swift */; };
 		8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DF2485687300BF6390 /* TenkiCeo.swift */; };
+		8F6639A52488529E00162223 /* GloballyUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6639A42488529E00162223 /* GloballyUsed.swift */; };
 		8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A4CD624874AA400116F47 /* NauticalData.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		8F1574AD2484AB8000968526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F5E31DD2485655700BF6390 /* TenkiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiModel.swift; sourceTree = "<group>"; };
 		8F5E31DF2485687300BF6390 /* TenkiCeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiCeo.swift; sourceTree = "<group>"; };
+		8F6639A42488529E00162223 /* GloballyUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyUsed.swift; sourceTree = "<group>"; };
 		8F7A4CD624874AA400116F47 /* NauticalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticalData.swift; sourceTree = "<group>"; };
 		99040CCB9961E820B4542C75 /* Pods-Moodiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.debug.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				8F5E31DD2485655700BF6390 /* TenkiModel.swift */,
+				8F6639A42488529E00162223 /* GloballyUsed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				8F7A4CD724874AA400116F47 /* NauticalData.swift in Sources */,
 				8F1574A42484AB7B00968526 /* TenkiViewController.swift in Sources */,
 				8F1574A02484AB7B00968526 /* AppDelegate.swift in Sources */,
+				8F6639A52488529E00162223 /* GloballyUsed.swift in Sources */,
 				8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */,
 				8F1574A22484AB7B00968526 /* SceneDelegate.swift in Sources */,
 				8F5E31DE2485655700BF6390 /* TenkiModel.swift in Sources */,
