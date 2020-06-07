@@ -13,7 +13,7 @@ struct TenkiCeo {
     
     private let moodinessAPIKey = "32f834d6f992fc6339fcf1c341eb0b28"
     
-    func pulldownTenki(cityName: String, completion: @escaping (Result<TenkiData, Error>) -> Void ) {
+    func pulldownTenki(cityName: String, completion: @escaping (Result<TenkiMod, Error>) -> Void ) {
         
         // %@ formatting
         let encodedCityName = cityName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? cityName
@@ -24,9 +24,11 @@ struct TenkiCeo {
                
             switch response.result {
             case .success(let tenkiData):
-                completion(.success(tenkiData))
+                completion(.success(tenkiData.tenkiMod))
                 
                 print(tenkiData)
+                print(" ------------------ separator -----------")
+                print(tenkiData.tenkiMod)
                 
             case .failure(let error):
                 completion(.failure(error ))

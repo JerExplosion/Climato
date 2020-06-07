@@ -29,30 +29,27 @@ class TenkiViewController: UIViewController {
     
     private func pulldownTenki() {
           
-        tenkiCeo.pulldownTenki(cityName: "atlanta") { [weak self] (result) in
+        tenkiCeo.pulldownTenki(cityName: "longyearbyen") { [weak self] (result) in
             
             guard let unRetainedSelf = self else { return }
             switch result {
-            case .success(let tenkiDaTa):
-                unRetainedSelf.refreshView(with: tenkiDaTa)
+            case .success(let tenkiMod):
+                unRetainedSelf.refreshView(with: tenkiMod)
                 
             case .failure(let error):
-                print(error.localizedDescription )
-                
+                print(error.localizedDescription)
             }
         }
-        
     }
     
-    private func refreshView(with dataModel: TenkiData) {
-        
-        
+    private func refreshView(with tenkiMod: TenkiMod) {
         ceaseAnims()
         
-        temperamentLabel.text = String(format: "%.1f", dataModel.main.temp) + "°C"
-        ambienceLabel.text = dataModel.weather.first?.description
-        
-        navigationItem.title = dataModel.name
+        ambienceLabel.text = tenkiMod.conditionDescription
+        temperamentLabel.text = String(format: "%.1f", tenkiMod.temp) + "°C"
+        print(String(format: "%.1f", tenkiMod.temp))
+        navigationItem.title = tenkiMod.bashoString
+        ambienceImageView.image = UIImage(named: tenkiMod.correspondingImage )
     }
 
     private func skeleAnim() {
