@@ -39,17 +39,21 @@ class TenkiViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-        }
+        }    
     }
     
     private func refreshView(with tenkiMod: TenkiMod) {
-        ceaseAnims()
         
         ambienceLabel.text = tenkiMod.conditionDescription
         temperamentLabel.text = String(format: "%.1f", tenkiMod.temp) + "°C"
         print(String(format: "%.1f", tenkiMod.temp))
         navigationItem.title = tenkiMod.bashoString
+        
         ambienceImageView.image = UIImage(named: tenkiMod.correspondingImage )
+          
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
+            self.ceaseAnims()
+        })
     }
 
     private func skeleAnim() {
