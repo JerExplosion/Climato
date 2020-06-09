@@ -33,7 +33,7 @@ class ACViewController: UIViewController {
     @IBAction func searchingInAction(_ sender: UIButton) {
         statusLabel.isHidden = true
         guard let citiText = citiTextField.text, !citiText.isEmpty else {
-            errorStatus(errorMessage: "City cannot be empty, try again please!")
+            errorStatus(errorMessage: "City cannot be empty, try again!")
             return
         }
         
@@ -55,25 +55,28 @@ class ACViewController: UIViewController {
             switch result {
             case .success(let mod):
                 print(mod.bashoString)
+                unwrappedSelf.successStatus(mod: mod)
             case .failure(let error):
-                unwrappedSelf.errorStatus(errorMessage: error.localizedDescription )
-
+                unwrappedSelf.errorStatus(errorMessage: "Invalid city, try again!")
             }
         }
     }
     
     private func successStatus(mod: TenkiMod) {
-        
+        statusLabel.textColor = .green
+        statusLabel.text = "Success!"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.statusLabel.isHidden = false
+        })
     }
     
     private func errorStatus(errorMessage: String) {
-        statusLabel.isHidden = false
         statusLabel.text = errorMessage
         statusLabel.textColor = .red
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.statusLabel.isHidden = true
-        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                   self.statusLabel.isHidden = false
+               })
     }
     
     fileprivate func viewAppearance() {
