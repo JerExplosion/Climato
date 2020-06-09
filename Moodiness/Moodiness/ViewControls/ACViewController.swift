@@ -15,6 +15,8 @@ class ACViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    private let tenkiCeo = TenkiCeo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewAppearance()
@@ -40,6 +42,28 @@ class ACViewController: UIViewController {
     
     private func backendSearching(citi: String) {
         print(citi)
+        activityIndicator.startAnimating()
+        
+        tenkiCeo.pulldownTenki(cityName: citi) { [weak self] (result) in
+            
+            guard let unwrappedSelf = self else { return }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                unwrappedSelf.activityIndicator.stopAnimating()
+            }
+                          
+            switch result {
+            case .success(let mod):
+                print(mod.bashoString)
+            case .failure(let error):
+                unwrappedSelf.errorStatus(errorMessage: error.localizedDescription )
+
+            }
+        }
+    }
+    
+    private func successStatus(mod: TenkiMod) {
+        
     }
     
     private func errorStatus(errorMessage: String) {
@@ -74,3 +98,4 @@ extension ACViewController: UIGestureRecognizerDelegate {
         return touch.view == self.view
     }
 }
+                     

@@ -9,7 +9,5 @@
 import Foundation
 
 struct GloballyUsed {
-    
     static let showACsegue = "showAC"
-       
 }
