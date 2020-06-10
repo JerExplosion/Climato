@@ -11,27 +11,28 @@ import UIKit
 
 struct TenkiCeo {
     
-    private let moodinessAPIKey = "32f834d6f992fc6339fcf1c341eb0b28"
+    private let moodinessAPIKey = GloballyUsed.moodinessAPIKey
     
     func pulldownTenki(cityName: String, completion: @escaping (Result<TenkiMod, Error>) -> Void ) {
         
         // %@ formatting
         let encodedCityName = cityName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? cityName
-        let path = "https://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@&units=metric"
+        let path = GloballyUsed.openTenkiPath
         let urlString = String(format: path, encodedCityName, moodinessAPIKey)
         
         AF.request(urlString).responseDecodable(of: TenkiData.self, queue:  .main, decoder: JSONDecoder()) { (response) in
                
             switch response.result {
+                
             case .success(let tenkiData):
                 completion(.success(tenkiData.tenkiMod))
                 
-                print(tenkiData)
-                print(" ------------------ separator -----------")
-                print(tenkiData.tenkiMod)
-                
             case .failure(let error):
-                completion(.failure(error ))
+                if response.response?.statusCode == 404 {
+                    completion(.failure(TenkiErrors.unRecognizedCity))
+                } else {
+                    completion(.failure(TenkiErrors.unClassfied))
+                }
             }
         }
     }

@@ -15,13 +15,14 @@ class ACViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    weak var tenkiVcDelegate: TenkiViewControllerDelegate?
     private let tenkiCeo = TenkiCeo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewAppearance()
-
         dismissWhenTappingOutside()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +33,14 @@ class ACViewController: UIViewController {
     
     @IBAction func searchingInAction(_ sender: UIButton) {
         statusLabel.isHidden = true
+        
         guard let citiText = citiTextField.text, !citiText.isEmpty else {
-            errorStatus(errorMessage: "City cannot be empty, try again!")
+            activityIndicator.startAnimating()
+            errorStatus(errorMessage: "\(TenkiErrors.emptyCityfield.localizedDescription)")
+                                         // print("City cannot be empty, try again!")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.activityIndicator.stopAnimating()
+            }
             return
         }
         
@@ -41,9 +48,9 @@ class ACViewController: UIViewController {
     }
     
     private func backendSearching(citi: String) {
-        print(citi)
-        activityIndicator.startAnimating()
         
+        activityIndicator.startAnimating()
+        view.endEditing(true)
         tenkiCeo.pulldownTenki(cityName: citi) { [weak self] (result) in
             
             guard let unwrappedSelf = self else { return }
@@ -54,10 +61,10 @@ class ACViewController: UIViewController {
                           
             switch result {
             case .success(let mod):
-                print(mod.bashoString)
                 unwrappedSelf.successStatus(mod: mod)
             case .failure(let error):
-                unwrappedSelf.errorStatus(errorMessage: "Invalid city, try again!")
+                unwrappedSelf.errorStatus(errorMessage: error.localizedDescription)
+           //   unwrappedSelf.errorStatus(errorMessage: "Invalid city, try again!")
             }
         }
     }
@@ -68,6 +75,11 @@ class ACViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.statusLabel.isHidden = false
         })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.tenkiVcDelegate?.alreadyUpdatedTenkiFromSearch(tenkiMod: mod)
+        }
     }
     
     private func errorStatus(errorMessage: String) {

@@ -21,10 +21,7 @@ class TenkiViewController: UIViewController {
         super.viewDidLoad()
         
         skeleAnim()
-        
         pulldownTenki()
-        
-    //    tenkiCeo.pulldownTenki(cityName: "guilin")
     }
     
     private func pulldownTenki() {
@@ -34,7 +31,7 @@ class TenkiViewController: UIViewController {
             guard let unRetainedSelf = self else { return }
             switch result {
             case .success(let tenkiMod):
-                unRetainedSelf.refreshView(with: tenkiMod)
+                unRetainedSelf.refreshView(with: tenkiMod, in: 0.6)
                 
             case .failure(let error):
                 print(error.localizedDescription)
@@ -42,19 +39,18 @@ class TenkiViewController: UIViewController {
         }    
     }
     
-    private func refreshView(with tenkiMod: TenkiMod) {
+    private func refreshView(with tenkiMod: TenkiMod, in howlong: Double) {
         
-        ambienceLabel.text = tenkiMod.conditionDescription
-        temperamentLabel.text = String(format: "%.1f", tenkiMod.temp) + "°C"
-        print(String(format: "%.1f", tenkiMod.temp))
         navigationItem.title = tenkiMod.bashoString
-        
-        ambienceImageView.image = UIImage(named: tenkiMod.correspondingImage )
-          
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
-            self.ceaseAnims()
+        ambienceLabel.text = tenkiMod.conditionDescription
+        ambienceImageView.image = UIImage(named: tenkiMod.correspondingImage)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + howlong, execute: { [weak self] in
+            guard let thisSelf = self else { return }
+            thisSelf.ceaseAnims()
+            thisSelf.temperamentLabel.text = String(format: "%.1f", tenkiMod.temp) + "°C"
         })
-    }
+    } // is weak self necessary here tho?
 
     private func skeleAnim() {
             
@@ -77,8 +73,29 @@ class TenkiViewController: UIViewController {
     @IBAction func additionTapped(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: GloballyUsed.showACsegue, sender: nil )
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == GloballyUsed.showACsegue {
+            
+            if let segueDestination = segue.destination as? ACViewController {
+                segueDestination.tenkiVcDelegate = self
+            }
+        }
+    }
 }
 
-         
+protocol TenkiViewControllerDelegate: class {
+    func alreadyUpdatedTenkiFromSearch(tenkiMod: TenkiMod)
+}
 
+extension TenkiViewController: TenkiViewControllerDelegate {
+    
+    func alreadyUpdatedTenkiFromSearch(tenkiMod: TenkiMod) {
+        skeleAnim()
+        presentedViewController?.dismiss(animated: true, completion: { [weak self] in
+            guard let self = self else { return }
+            self.refreshView(with: tenkiMod, in: 0.1) //time open for micro-adjustation
+        })
+    }
+    
+}

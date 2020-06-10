@@ -53,10 +53,4 @@ struct TenkiMod {
             return "mooClouds"
         }
     }
-    
-                 
-    
-    
-    
-    
 }
