@@ -7,6 +7,7 @@
 //
     
 import SkeletonView
+import CoreLocation
 import UIKit
 
 class TenkiViewController: UIViewController {
@@ -16,6 +17,12 @@ class TenkiViewController: UIViewController {
     @IBOutlet weak var ambienceLabel: UILabel!
     
     private let tenkiCeo = TenkiCeo()
+    
+    private lazy var locationCeo: CLLocationManager = {
+        let Ceo = CLLocationManager()
+        Ceo.delegate = self
+        return Ceo
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +75,17 @@ class TenkiViewController: UIViewController {
     
     
     @IBAction func bashoButtonTapped(_ sender: UIBarButtonItem) {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            locationCeo.requestLocation()
+        case .notDetermined:
+            locationCeo.requestWhenInUseAuthorization()
+            locationCeo.requestLocation()
+        default:
+            alertingForLocationPermission()
+        }
     }
-    
+
     @IBAction func additionTapped(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: GloballyUsed.showACsegue, sender: nil )
     }
