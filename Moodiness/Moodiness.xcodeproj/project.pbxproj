@@ -14,6 +14,7 @@
 		8F1574A72484AB7B00968526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1574A52484AB7B00968526 /* Main.storyboard */; };
 		8F1574A92484AB8000968526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1574A82484AB8000968526 /* Assets.xcassets */; };
 		8F1574AC2484AB8000968526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1574AA2484AB8000968526 /* LaunchScreen.storyboard */; };
+		8F2B4E1824948560002A8135 /* NauticaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2B4E1724948560002A8135 /* NauticaManager.swift */; };
 		8F5E31DE2485655700BF6390 /* TenkiMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DD2485655700BF6390 /* TenkiMod.swift */; };
 		8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E31DF2485687300BF6390 /* TenkiCeo.swift */; };
 		8F6639A52488529E00162223 /* GloballyUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6639A42488529E00162223 /* GloballyUsed.swift */; };
@@ -36,6 +37,7 @@
 		8F1574A82484AB8000968526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F1574AB2484AB8000968526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F1574AD2484AB8000968526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2B4E1724948560002A8135 /* NauticaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticaManager.swift; sourceTree = "<group>"; };
 		8F5E31DD2485655700BF6390 /* TenkiMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiMod.swift; sourceTree = "<group>"; };
 		8F5E31DF2485687300BF6390 /* TenkiCeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenkiCeo.swift; sourceTree = "<group>"; };
 		8F6639A42488529E00162223 /* GloballyUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyUsed.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				8F7A4CD624874AA400116F47 /* NauticaData.swift */,
 				8F6639A92488A31500162223 /* NauticaModel.swift */,
+				8F2B4E1724948560002A8135 /* NauticaManager.swift */,
 				8F6FDD97248C9865002926D3 /* sunriseAlto.pdf */,
 				8F6FDD99248C986E002926D3 /* moonAlto.pdf */,
 			);
@@ -275,6 +278,7 @@
 				8F6639A724889E8E00162223 /* ACViewController.swift in Sources */,
 				8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */,
 				8F1574A22484AB7B00968526 /* SceneDelegate.swift in Sources */,
+				8F2B4E1824948560002A8135 /* NauticaManager.swift in Sources */,
 				8F5E31DE2485655700BF6390 /* TenkiMod.swift in Sources */,
 				8FA9B2EE2492A716002A9923 /* CorLocCeo.swift in Sources */,
 			);
