@@ -16,7 +16,7 @@ class TenkiViewController: UIViewController {
     @IBOutlet weak var temperamentLabel: UILabel!
     @IBOutlet weak var ambienceLabel: UILabel!
     
-    private let tenkiCeo = TenkiCeo()
+    let tenkiCeo = TenkiCeo()
     
     private lazy var locationCeo: CLLocationManager = {
         let Ceo = CLLocationManager()
@@ -46,7 +46,7 @@ class TenkiViewController: UIViewController {
         }    
     }
     
-    private func refreshView(with tenkiMod: TenkiMod, in howlong: Double) {
+    func refreshView(with tenkiMod: TenkiMod, in howlong: Double) {
         
         navigationItem.title = tenkiMod.bashoString
         ambienceLabel.text = tenkiMod.conditionDescription

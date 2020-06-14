@@ -37,5 +37,33 @@ struct TenkiCeo {
         }
     }
 }
-       
+
+
+// MARK: - By coordinates
+   
+extension TenkiCeo {
+    func pulldownTenkiByLatLongt(lati: Double, longti: Double, completion: @escaping (Result<TenkiMod, Error>) -> Void)
+       {
+            
+           let path = GloballyUsed.latlongtPath
+           
+            let urlString = String(format: path, moodinessAPIKey, lati, longti )
+            
+            AF.request(urlString).responseDecodable(of: TenkiData.self, queue: .main, decoder: JSONDecoder()) { (response) in
+                   
+                switch response.result {
+                    
+                case .success(let tenkiData):
+                    completion(.success(tenkiData.tenkiMod))
+                    
+                case .failure(let error):
+                    if response.response?.statusCode == 404 {
+                        completion(.failure(TenkiErrors.unRecognizedCity))
+                    } else {
+                        completion(.failure(TenkiErrors.unClassfied))
+                    }
+                }
+            }
+       }
+}
  

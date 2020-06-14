@@ -12,6 +12,9 @@ struct GloballyUsed {
     static let openTenkiPath = "https://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@&units=metric"
     static let showACsegue = "showAC"
     static let moodinessAPIKey = "32f834d6f992fc6339fcf1c341eb0b28"
+    
+    
+    static let latlongtPath = "https://api.openweathermap.org/data/2.5/weather?appid=%@&units=metric&lat=%f&lon=%f"
 }
 
 enum TenkiErrors: Error, LocalizedError {
