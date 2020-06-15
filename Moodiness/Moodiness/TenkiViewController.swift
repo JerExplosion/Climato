@@ -28,12 +28,12 @@ class TenkiViewController: UIViewController {
         super.viewDidLoad()
         
         skeleAnim()
-        pulldownTenki()
+        pullTenkiDownInVC(byPlace: "longyearbyen")
     }
     
-    private func pulldownTenki() {
+    private func pullTenkiDownInVC(byPlace city: String) {
           
-        tenkiCeo.pulldownTenki(cityName: "longyearbyen") { [weak self] (result) in
+        tenkiCeo.pulldownTenki(cityName: city) { [weak self] (result) in
             
             guard let unRetainedSelf = self else { return }
             switch result {
