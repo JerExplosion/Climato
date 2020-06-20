@@ -34,9 +34,7 @@ extension TenkiViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {  }
-    
-    
-    
+
 }
 
 extension TenkiViewController {
