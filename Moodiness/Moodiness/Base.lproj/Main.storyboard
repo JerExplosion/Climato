@@ -320,7 +320,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Altos" width="662" height="662"/>
+        <image name="Altos" width="836" height="661"/>
         <image name="cloud.rain" catalog="system" width="128" height="125"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.slash" catalog="system" width="128" height="115"/>
