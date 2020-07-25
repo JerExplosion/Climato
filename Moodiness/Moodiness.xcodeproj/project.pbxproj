@@ -23,6 +23,7 @@
 		8F6FDD98248C9865002926D3 /* sunriseAlto.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6FDD97248C9865002926D3 /* sunriseAlto.pdf */; };
 		8F6FDD9A248C986E002926D3 /* moonAlto.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6FDD99248C986E002926D3 /* moonAlto.pdf */; };
 		8F7A4CD724874AA400116F47 /* NauticaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A4CD624874AA400116F47 /* NauticaData.swift */; };
+		8F93E94C24CBAF5500A6320F /* NSFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F93E94B24CBAF5500A6320F /* NSFetchedResultsControllerDelegate.swift */; };
 		8FA9B2EE2492A716002A9923 /* CorLocCeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9B2ED2492A716002A9923 /* CorLocCeo.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		8F6FDD97248C9865002926D3 /* sunriseAlto.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sunriseAlto.pdf; sourceTree = "<group>"; };
 		8F6FDD99248C986E002926D3 /* moonAlto.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = moonAlto.pdf; sourceTree = "<group>"; };
 		8F7A4CD624874AA400116F47 /* NauticaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NauticaData.swift; sourceTree = "<group>"; };
+		8F93E94B24CBAF5500A6320F /* NSFetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 		8FA9B2ED2492A716002A9923 /* CorLocCeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorLocCeo.swift; sourceTree = "<group>"; };
 		99040CCB9961E820B4542C75 /* Pods-Moodiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.debug.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				8F15749F2484AB7B00968526 /* AppDelegate.swift */,
 				8F1574A12484AB7B00968526 /* SceneDelegate.swift */,
 				8F1574A32484AB7B00968526 /* TenkiViewController.swift */,
+				8F93E94B24CBAF5500A6320F /* NSFetchedResultsControllerDelegate.swift */,
 				8F6639A824889ECD00162223 /* ViewControls */,
 				8F5E31E12485693800BF6390 /* ChiefOps */,
 				8F5E31DC2485652500BF6390 /* Model */,
@@ -278,6 +281,7 @@
 				8F6639A724889E8E00162223 /* ACViewController.swift in Sources */,
 				8F5E31E02485687300BF6390 /* TenkiCeo.swift in Sources */,
 				8F1574A22484AB7B00968526 /* SceneDelegate.swift in Sources */,
+				8F93E94C24CBAF5500A6320F /* NSFetchedResultsControllerDelegate.swift in Sources */,
 				8F2B4E1824948560002A8135 /* NauticaManager.swift in Sources */,
 				8F5E31DE2485655700BF6390 /* TenkiMod.swift in Sources */,
 				8FA9B2EE2492A716002A9923 /* CorLocCeo.swift in Sources */,
