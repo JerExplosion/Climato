@@ -8,6 +8,8 @@ target 'Moodiness' do
   	
   pod 'Alamofire'
   pod 'SkeletonView'
+  
+  pod 'Google-Mobile-Ads-SDK'
     
 
 end

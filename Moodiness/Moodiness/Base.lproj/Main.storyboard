@@ -213,6 +213,85 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
+        <!--Vbanner View Controller-->
+        <scene sceneID="dPg-Ea-fMg">
+            <objects>
+                <viewController storyboardIdentifier="ADVbannerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c2p-0B-R22" customClass="ADVbannerViewController" customModule="Moodiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NuF-2O-NOR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-zn-sBf">
+                                <rect key="frame" x="133" y="385" width="148" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lqO-cO-VNp"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingLabel" destination="bNd-zn-sBf" id="UiE-Gw-IAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPw-5c-CaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895.6521739130435" y="-2192.4107142857142"/>
+        </scene>
+        <!--Vinterstitial View Controller-->
+        <scene sceneID="dP6-Vt-F3p">
+            <objects>
+                <viewController storyboardIdentifier="ADVinterstitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cG3-RB-FcU" customClass="ADVinterstitialViewController" customModule="Moodiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="81G-vl-b2C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-ay-0RB">
+                                <rect key="frame" x="132" y="592" width="156" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="19"/>
+                                <state key="normal" title="Present Interstitial"/>
+                                <connections>
+                                    <action selector="presentInterstitial:" destination="cG3-RB-FcU" eventType="touchUpInside" id="ZVC-DY-n94"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="v6m-uL-Pls"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3b-4Z-bbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3429" y="-1527"/>
+        </scene>
+        <!--Vstellar View Controller-->
+        <scene sceneID="QaQ-kh-glp">
+            <objects>
+                <viewController storyboardIdentifier="ADVstellarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pdk-9c-oTz" customClass="ADVstellarViewController" customModule="Moodiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plu-cS-jNj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REQ-0j-kZ0">
+                                <rect key="frame" x="192" y="478" width="34" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <state key="normal" title="ADs"/>
+                                <connections>
+                                    <action selector="adsShowUp:" destination="pdk-9c-oTz" eventType="touchUpInside" id="bXE-fi-zI1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="29v-QE-pJm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W27-q8-nIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="-1527"/>
+        </scene>
         <!--Alto-->
         <scene sceneID="1Rr-Ic-g6p">
             <objects>

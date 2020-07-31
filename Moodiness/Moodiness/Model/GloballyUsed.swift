@@ -15,6 +15,14 @@ struct GloballyUsed {
     
     
     static let latlongtPath = "https://api.openweathermap.org/data/2.5/weather?appid=%@&units=metric&lat=%f&lon=%f"
+    
+    // MARS: -
+    
+    static let stellarVCID = "ADVstellarViewController"
+    static let interstitialVCID = "ADVinterstitialViewController"
+    static let bannerVCID = "ADVbannerViewController"
+    
+    
 }
 
 enum TenkiErrors: Error, LocalizedError {
