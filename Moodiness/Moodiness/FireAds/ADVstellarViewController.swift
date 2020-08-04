@@ -16,19 +16,16 @@ class ADVstellarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //
         // this id is standard is for test
            
         let request = GADRequest()
         interstitial.load(request)
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    
     }
     
     @IBAction func adsShowUp(_ sender: UIButton) {
@@ -36,10 +33,7 @@ class ADVstellarViewController: UIViewController {
         if interstitial.isReady {
           interstitial.present(fromRootViewController: self)
         } else {
-          print("Ad wasn't ready")
+          print("Ads weren't ready")
         }
     }
-    
-    
-
 }
