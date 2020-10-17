@@ -28,7 +28,18 @@
 		8FAD651024D31C46008A4A28 /* ADVstellarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD650F24D31C46008A4A28 /* ADVstellarViewController.swift */; };
 		8FAD651224D32087008A4A28 /* ADVinterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD651124D32087008A4A28 /* ADVinterstitialViewController.swift */; };
 		8FAD651424D32BFE008A4A28 /* ADVbannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD651324D32BFE008A4A28 /* ADVbannerViewController.swift */; };
+		8FC80ECE253BA3010068DD42 /* MoodinessTesost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC80ECD253BA3010068DD42 /* MoodinessTesost.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FC80ED0253BA3010068DD42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F1574942484AB7B00968526 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F15749B2484AB7B00968526;
+			remoteInfo = Moodiness;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		32A26DED97545D274A7556AB /* Pods-Moodiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.release.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +66,9 @@
 		8FAD650F24D31C46008A4A28 /* ADVstellarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVstellarViewController.swift; sourceTree = "<group>"; };
 		8FAD651124D32087008A4A28 /* ADVinterstitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVinterstitialViewController.swift; sourceTree = "<group>"; };
 		8FAD651324D32BFE008A4A28 /* ADVbannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADVbannerViewController.swift; sourceTree = "<group>"; };
+		8FC80ECB253BA3010068DD42 /* MoodinessTesost.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodinessTesost.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC80ECD253BA3010068DD42 /* MoodinessTesost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodinessTesost.swift; sourceTree = "<group>"; };
+		8FC80ECF253BA3010068DD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99040CCB9961E820B4542C75 /* Pods-Moodiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodiness.debug.xcconfig"; path = "Target Support Files/Pods-Moodiness/Pods-Moodiness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6058024EBD8C1085DB4DD5EC /* Pods_Moodiness.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC80EC8253BA3010068DD42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8F15749E2484AB7B00968526 /* Moodiness */,
+				8FC80ECC253BA3010068DD42 /* MoodinessTesost */,
 				8F15749D2484AB7B00968526 /* Products */,
 				F019BE1D8960B646F231B67D /* Pods */,
 				3E140569A25EF75A667B0910 /* Frameworks */,
@@ -92,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8F15749C2484AB7B00968526 /* Moodiness.app */,
+				8FC80ECB253BA3010068DD42 /* MoodinessTesost.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +187,15 @@
 			path = FireAds;
 			sourceTree = "<group>";
 		};
+		8FC80ECC253BA3010068DD42 /* MoodinessTesost */ = {
+			isa = PBXGroup;
+			children = (
+				8FC80ECD253BA3010068DD42 /* MoodinessTesost.swift */,
+				8FC80ECF253BA3010068DD42 /* Info.plist */,
+			);
+			path = MoodinessTesost;
+			sourceTree = "<group>";
+		};
 		F019BE1D8960B646F231B67D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,18 +227,40 @@
 			productReference = 8F15749C2484AB7B00968526 /* Moodiness.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8FC80ECA253BA3010068DD42 /* MoodinessTesost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC80ED4253BA3010068DD42 /* Build configuration list for PBXNativeTarget "MoodinessTesost" */;
+			buildPhases = (
+				8FC80EC7253BA3010068DD42 /* Sources */,
+				8FC80EC8253BA3010068DD42 /* Frameworks */,
+				8FC80EC9253BA3010068DD42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FC80ED1253BA3010068DD42 /* PBXTargetDependency */,
+			);
+			name = MoodinessTesost;
+			productName = MoodinessTesost;
+			productReference = 8FC80ECB253BA3010068DD42 /* MoodinessTesost.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8F1574942484AB7B00968526 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jerry Ren";
 				TargetAttributes = {
 					8F15749B2484AB7B00968526 = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					8FC80ECA253BA3010068DD42 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 8F15749B2484AB7B00968526;
 					};
 				};
 			};
@@ -224,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				8F15749B2484AB7B00968526 /* Moodiness */,
+				8FC80ECA253BA3010068DD42 /* MoodinessTesost */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +293,13 @@
 				8F1574AC2484AB8000968526 /* LaunchScreen.storyboard in Resources */,
 				8F1574A92484AB8000968526 /* Assets.xcassets in Resources */,
 				8F1574A72484AB7B00968526 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC80EC9253BA3010068DD42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +370,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FC80EC7253BA3010068DD42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC80ECE253BA3010068DD42 /* MoodinessTesost.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FC80ED1253BA3010068DD42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F15749B2484AB7B00968526 /* Moodiness */;
+			targetProxy = 8FC80ED0253BA3010068DD42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F1574A52484AB7B00968526 /* Main.storyboard */ = {
@@ -482,6 +560,48 @@
 			};
 			name = Release;
 		};
+		8FC80ED2253BA3010068DD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQGTQT3UZ8;
+				INFOPLIST_FILE = MoodinessTesost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerExplosion.MoodinessTesost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moodiness.app/Moodiness";
+			};
+			name = Debug;
+		};
+		8FC80ED3253BA3010068DD42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FQGTQT3UZ8;
+				INFOPLIST_FILE = MoodinessTesost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerExplosion.MoodinessTesost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moodiness.app/Moodiness";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -499,6 +619,15 @@
 			buildConfigurations = (
 				8F1574B12484AB8000968526 /* Debug */,
 				8F1574B22484AB8000968526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC80ED4253BA3010068DD42 /* Build configuration list for PBXNativeTarget "MoodinessTesost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC80ED2253BA3010068DD42 /* Debug */,
+				8FC80ED3253BA3010068DD42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

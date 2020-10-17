@@ -51,3 +51,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+public class Calc {
+    
+}
+
+
