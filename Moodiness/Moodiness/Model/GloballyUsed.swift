@@ -21,8 +21,6 @@ struct GloballyUsed {
     static let stellarVCID = "ADVstellarViewController"
     static let interstitialVCID = "ADVinterstitialViewController"
     static let bannerVCID = "ADVbannerViewController"
-    
-    
 }
 
 enum TenkiErrors: Error, LocalizedError {
