@@ -5,12 +5,18 @@
 //  Created by Jerry Ren on 5/31/20.
 //  Copyright © 2020 Jerry Ren. All rights reserved.
 //
-    
+        
+import Combine                  
+
 import SkeletonView
 import CoreLocation
 import UIKit
 
 class TenkiViewController: UIViewController {
+    
+    var webserviceCombine = WebServiceCombine()
+    var cancellable: AnyCancellable?
+    // MARK: - above declarations are for the combine approach obvs
     
     @IBOutlet weak var ambienceImageView: UIImageView!
     @IBOutlet weak var temperamentLabel: UILabel!
@@ -27,8 +33,11 @@ class TenkiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        skeleAnim()
-        pullTenkiDownInVC(byPlace: "longyearbyen")
+        combineDisplayAssignToTemperamentLabel()
+        // MARK: - combine function above
+        
+  //      skeleAnim()
+   //     pullTenkiDownInVC(byPlace: "longyearbyen")
     }
     
     private func pullTenkiDownInVC(byPlace city: String) {
